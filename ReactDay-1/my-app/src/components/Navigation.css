@@ -1,0 +1,14 @@
+.navigation{
+    padding: 10px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.navigation ul{
+    display: flex;
+    list-style: none;
+}
+.list{
+    padding: 10px;
+}

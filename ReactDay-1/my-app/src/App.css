@@ -1,38 +1,21 @@
-.App {
-  text-align: center;
-}
+/* if you want to do external styling, you can either style here in app.css or you create css files for each js file you have and then style but ensure to give your work classnames(it uses classnames, not class). Then aferwards you import in the respective js */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Also note that whatever you do on the app.css covers the entire web page hence you must be careful not to use the same class names in your app.css and your other css files */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-.App-link {
-  color: #61dafb;
+/* you can add an image normally as a background via css or you can add it via the js file */
+.banner{
+  height: 300px;
+  background-color: grey;
+  background-image: url(./components/images/banner2.webp);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* .navigation{
+  background-color: red;
+} */
