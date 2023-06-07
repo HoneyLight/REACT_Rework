@@ -1,0 +1,170 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* navigation */
+.navigation{
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  position: fixed;
+}
+.nav1{
+  text-align: center;
+}
+.nav1 h1{
+  letter-spacing: 3px;
+}
+.nav2 ul{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  font-size: 13px;
+}
+.list{
+  padding: 10px;
+}
+
+/* banner */
+.overall{
+  padding-top: 80px;
+}
+.banner{
+  /* margin-top: 6rem; */
+  height: 440px;
+  background-image: url(./Components/images/banner-img.webp);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: cover;
+  color: white;
+}
+.banner div,
+.section1 div,
+.section2 div,
+.section3 div,
+.section4 div,
+.section5 div,
+.section6 div,
+.section7 div,
+.section8 div{
+  position: relative;
+  top: 67%;
+  line-height: 2;
+  text-align: center;
+}
+button{
+  background-color: white;
+  padding: 10px 13px;
+  cursor: pointer;
+  border-width: thin;
+}
+
+/* section1 */
+.section1{
+  height: 420px;
+  background-image: url(./Components/images/section1-img.webp);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: cover;
+  color: white;
+}
+
+/* section2 */
+.section2{
+  height: 420px;
+  background-image: url(./Components/images/section2-img.webp);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: cover;
+  color: white;
+}
+.section3{
+  height: 420px;
+  background-image: url(./Components/images/section3-img.webp);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: cover;
+  color: white;
+}
+.section4{
+  height: 420px;
+  background-image: url(./Components/images/section4-img.webp);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: cover;
+  color: white;
+}
+.section5{
+  height: 420px;
+  background-image: url(./Components/images/section5-img.webp);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: cover;
+  color: white;
+}
+.section6{
+  color: white;
+  height: 420px;
+  background-image: url(./Components/images/section6-img.webp);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: cover;
+}
+.section7{
+  height: 420px;
+  background-image: url(./Components/images/section7-img.webp);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: cover;
+  color: white;
+}
+.section8{
+  height: 420px;
+  background-image: url(./Components/images/section8-img.webp);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: cover;
+  color: white;
+}
+.section9{
+  margin: 30px 0;
+  display: flex;
+  padding-left:30px;
+  justify-content: space-between;
+  word-wrap: break-word;
+  line-height: 1.6;
+}
+.section9 div{
+  width: 29%;
+}
+.footer{
+  background-color: black;
+  padding: 6rem 0;
+}
+.footer h1{
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 4rem;
+  color: white;
+}
+.footer ul{
+  list-style: none;
+  font-size: 13px;
+  line-height: 2;
+  color: #a9a5a5;
+}
+.footer .content{
+  display: flex;
+  justify-content: space-around;
+}
+.footer .content h5{
+  font-size: 15px;
+  color: white;
+}

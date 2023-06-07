@@ -1,4 +1,5 @@
 import './Navigation.css';
+import { Link } from "react-router-dom";
 
 function Navigation() {
 
@@ -19,12 +20,28 @@ function Navigation() {
                 <li style={lists}>Contact</li>
                 <li style={lists}>Services</li>
             </ul> */}
-            <h1 className='logo'>Logo</h1>
+            <h1 className='logo'>
+                <Link to="/" className='nav-link'>Logo</Link>
+            </h1>
             <ul>
-                <li className='list'>Home</li>
-                <li className='list'>About</li>
-                <li className='list'>Contact</li>
-                <li className='list'>Services</li>
+                <li className='list'>
+                    <Link to="/" className='nav-link'>Home</Link>
+                </li>
+                <li className='list'>
+                    <Link to="/about" className='nav-link'>About</Link>
+                </li>
+                <li className='list'>
+                    <Link to="/menu" className='nav-link'>Menu</Link>
+                </li>
+                <li className='list'>
+                    <Link to="/contact" className='nav-link'>Contact</Link>
+                </li>
+                <li className='list'>
+                    <Link to="/counter" className='nav-link'>Counter</Link>
+                </li>
+                <li className='list'>
+                    <Link to="/classcomp" className='nav-link'>Class Component</Link>
+                </li>
             </ul>
         </header>
     )

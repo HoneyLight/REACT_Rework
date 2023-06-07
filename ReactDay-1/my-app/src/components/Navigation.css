@@ -1,9 +1,8 @@
 .navigation{
     padding: 10px;
-    background-color: black;
+    box-shadow: 2px 2px 2px rgba(195, 195, 194, 5);
     display: flex;
     justify-content: space-between;
-    color: white;
 }
 .navigation ul{
     display: flex;
@@ -11,4 +10,8 @@
 }
 .list{
     padding: 10px;
+}
+.nav-link{
+    text-decoration: none;
+    color: black;
 }
