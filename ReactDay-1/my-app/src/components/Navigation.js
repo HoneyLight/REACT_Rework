@@ -42,6 +42,9 @@ function Navigation() {
                 <li className='list'>
                     <Link to="/classcomp" className='nav-link'>Class Component</Link>
                 </li>
+                <li className='list'>
+                    <Link to="/posts" className='nav-link'>Posts</Link>
+                </li>
             </ul>
         </header>
     )

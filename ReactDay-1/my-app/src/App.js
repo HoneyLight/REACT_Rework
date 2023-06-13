@@ -35,6 +35,8 @@ import Menu from "./pages/Menu";
 import Contact from "./pages/Contact"; 
 import Counter from "./pages/Counter";
 import ClassComp from "./pages/ClassComp";
+import UserDetails from "./pages/UserDetails";
+import Posts from "./pages/Posts";
 
 function App() {
   return(
@@ -46,6 +48,8 @@ function App() {
       <Route path="/contact" element={<Contact />}/>
       <Route path="/counter" element={<Counter />}/>
       <Route path="/classcomp" element={<ClassComp />}/>
+      <Route path="/user_details" element={<UserDetails />}/>
+      <Route path="/posts" element={<Posts />}/>
     </Routes>
     
     </BrowserRouter>
