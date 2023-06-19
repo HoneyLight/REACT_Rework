@@ -34,6 +34,9 @@ function Navigation() {
                     <Link to="/menu" className='nav-link'>Menu</Link>
                 </li>
                 <li className='list'>
+                    <Link to="/flowermenu" className='nav-link'>Flower Menu</Link>
+                </li>
+                <li className='list'>
                     <Link to="/contact" className='nav-link'>Contact</Link>
                 </li>
                 <li className='list'>
@@ -45,6 +48,14 @@ function Navigation() {
                 <li className='list'>
                     <Link to="/posts" className='nav-link'>Posts</Link>
                 </li>
+                <li className='list'>
+                    <Link to="/fooddetails" className='nav-link'>Food Details</Link>
+                </li>
+                <li className="list">
+            <Link to="/blog" className="nav-link">
+              Blog
+            </Link>
+          </li>
             </ul>
         </header>
     )
