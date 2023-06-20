@@ -31,7 +31,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Menu from "./pages/FlowerMenu";
+import Menu from "./pages/Menu";
 import Contact from "./pages/Contact"; 
 import Counter from "./pages/Counter";
 import ClassComp from "./pages/ClassComp";
@@ -42,6 +42,7 @@ import FoodDetails from "./pages/FoodDetails";
 import Blog from "./blogFrontend/Blog";
 import BlogDashboard from "./blogAdmin/BlogDashboard";
 import CreateBlog from "./blogAdmin/CreateBlog";
+import BlogDetails from "./blogFrontend/BlogDetails";
 
 
 function App() {
@@ -50,17 +51,18 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />}/>
       <Route path="/about" element={<About />}/>
-      <Route path="/menu:id" element={<Menu />}/>
+      <Route path="/menu" element={<Menu />}/>
       <Route path="/contact" element={<Contact />}/>
       <Route path="/counter" element={<Counter />}/>
       <Route path="/classcomp" element={<ClassComp />}/>
       <Route path="/user_details" element={<UserDetails />}/>
       <Route path="/posts" element={<Posts />}/>
       <Route path="/flowermenu" element={<FlowerMenu />}/>
-      <Route path="/fooddetails" element={<FoodDetails />}/>
+      <Route path="/menu/:category/:id" element={<FoodDetails />}/>
       <Route path="/blog" element={<Blog />} />
       <Route path="/admin" element={<BlogDashboard />} />
       <Route path="/create-blog" element={<CreateBlog />} />
+      <Route path="/blog/:id" element={<BlogDetails />}/>
     </Routes>
     
     </BrowserRouter>

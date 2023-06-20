@@ -1,11 +1,12 @@
+import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import BlogNav from "./BlogNav";
 import { IoPricetagOutline, IoTimeOutline, IoChatbubbleOutline, IoThumbsUpOutline, IoThumbsDownOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
-// import img from "../components/images/food2.jpg";
-// import { MdLoyalty } from "react-icons/md";
 
-function BlogCard() {
-    const [blogs, setBlogs] = useState([]);
+
+function BlogDetails() {
+    const { id } = useParams();
+    const [blog, setBlog] = useState({});
     const [like, setLike] = useState(0);
     const [dislike, setDislike] = useState(0)
 
@@ -15,22 +16,28 @@ function BlogCard() {
     const increaseDislike = () =>{
         setDislike(dislike + 1)
     };
+    
 
-    const getBlogs = () => {
-        fetch("https://64903af71e6aa71680cad9bc.mockapi.io/Blog")
-        .then((resp) => resp.json())
-        .then((data) => {
-            setBlogs(data);
-        })
+    const getBlog = () => {
+        fetch(`https://64903af71e6aa71680cad9bc.mockapi.io/Blog/${id}`)
+            .then((resp) => resp.json())
+            .then((data) => {
+                setBlog(data);
+                console.log(data)
+            });
     };
+
     useEffect(() => {
-        getBlogs()
+        getBlog();
     }, []);
 
     return (
-        <div className="blogCard-container">
-            {blogs.map((blog) => (
-                <Link to={`/blog/${blog.id}`} className="blog-card" key={blog.id}>
+        <div>
+            <BlogNav />
+            <div className="header">
+                <h2>{blog.title}</h2>
+            </div>
+            <div className="blog-card">
                 <img src={blog.img} alt="Food" />
                 <div className="blog-cat">
                     <IoPricetagOutline className="blog-cat-icon" />
@@ -46,18 +53,21 @@ function BlogCard() {
                         <IoChatbubbleOutline className="blog-footer-icon" /> 0
                     </p>
                     <p>
-                        <IoThumbsUpOutline className="blog-footer-icon" onClick={increaseLike} /> {blog.like}
+                        <IoThumbsUpOutline className="blog-footer-icon" onClick={increaseLike} /> {like}
                     </p>
                     <p>
-                        <IoThumbsDownOutline className="blog-footer-icon" onClick={increaseDislike}/> {blog.dislike}
+                        <IoThumbsDownOutline className="blog-footer-icon" onClick={increaseDislike}/> {dislike}
                     </p>
+                    {/* <p>
+                        <IoThumbsUpOutline className="blog-footer-icon" /> {blog.like}
+                    </p>
+                    <p>
+                        <IoThumbsDownOutline className="blog-footer-icon" /> {blog.dislike}
+                    </p> */}
                 </div>
-                </Link>
-
-            ))}
-            
+                </div>
         </div>
     )
 }
 
-export default BlogCard;
+export default BlogDetails;

@@ -18,7 +18,7 @@ import img3 from "../components/images/flower3.avif";
 import img4 from "../components/images/flower4.avif";
 import { useState } from "react";
 
-function Menu() {
+function FlowerMenu() {
   const [flowerArr, setFlowerArr] = useState( [
     {
       id: 1,
@@ -71,7 +71,7 @@ function Menu() {
     <div className="menu-page">
       <Navigation />
       <div>
-        <h1 className="header">This is Menu</h1>
+        <h1 className="header">This is my Flower Menu</h1>
       </div> 
       <div className="menus">
         {flowerArr.map((flower) => (
@@ -90,7 +90,7 @@ function Menu() {
     </div>
   );
 }
-export default Menu;
+export default FlowerMenu;
 
 // PROPS
 // with PROPS you can move information from one component or folder to another. you can make a reusuable component dynamic by using props.

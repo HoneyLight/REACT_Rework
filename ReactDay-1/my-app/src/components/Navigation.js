@@ -52,10 +52,10 @@ function Navigation() {
                     <Link to="/fooddetails" className='nav-link'>Food Details</Link>
                 </li>
                 <li className="list">
-            <Link to="/blog" className="nav-link">
-              Blog
-            </Link>
-          </li>
+                    <Link to="/blog" className="nav-link">
+                    Blog
+                    </Link>
+                </li>
             </ul>
         </header>
     )

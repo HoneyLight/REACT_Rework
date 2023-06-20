@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function BlogSide() {
+function BlogSidebar() {
     return(
         <div>
             <ul className="blogsidebar">
@@ -11,4 +11,4 @@ function BlogSide() {
     )
 }
 
-export default BlogSide;
+export default BlogSidebar;
