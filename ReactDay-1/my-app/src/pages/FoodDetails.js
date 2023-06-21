@@ -3,6 +3,7 @@ import Navigation from "../components/Navigation";
 import { useEffect, useState } from "react";
 import Btn from "../components/Btn";
 
+
 function FoodDetails() {
   const { category, id } = useParams();
   const [food, setFood] = useState({});

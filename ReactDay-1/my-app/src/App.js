@@ -32,40 +32,37 @@ import "./App.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Menu from "./pages/Menu";
-import Contact from "./pages/Contact"; 
+import Contact from "./pages/Contact";
 import Counter from "./pages/Counter";
 import ClassComp from "./pages/ClassComp";
 import UserDetails from "./pages/UserDetails";
 import Posts from "./pages/Posts";
 import FlowerMenu from "./pages/FlowerMenu";
 import FoodDetails from "./pages/FoodDetails";
-import Blog from "./blogFrontend/Blog";
-import BlogDashboard from "./blogAdmin/BlogDashboard";
-import CreateBlog from "./blogAdmin/CreateBlog";
-import BlogDetails from "./blogFrontend/BlogDetails";
+import Cart from "./pages/Cart";
+import FoodProvider from "./contexts/FoodContext";
+
 
 
 function App() {
-  return(
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Home />}/>
-      <Route path="/about" element={<About />}/>
-      <Route path="/menu" element={<Menu />}/>
-      <Route path="/contact" element={<Contact />}/>
-      <Route path="/counter" element={<Counter />}/>
-      <Route path="/classcomp" element={<ClassComp />}/>
-      <Route path="/user_details" element={<UserDetails />}/>
-      <Route path="/posts" element={<Posts />}/>
-      <Route path="/flowermenu" element={<FlowerMenu />}/>
-      <Route path="/menu/:category/:id" element={<FoodDetails />}/>
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/admin" element={<BlogDashboard />} />
-      <Route path="/create-blog" element={<CreateBlog />} />
-      <Route path="/blog/:id" element={<BlogDetails />}/>
-    </Routes>
-    
-    </BrowserRouter>
+  return (
+    <FoodProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/counter" element={<Counter />} />
+          <Route path="/classcomp" element={<ClassComp />} />
+          <Route path="/user_details" element={<UserDetails />} />
+          <Route path="/posts" element={<Posts />} />
+          <Route path="/flowermenu" element={<FlowerMenu />} />
+          <Route path="/menu/:category/:id" element={<FoodDetails />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </BrowserRouter>
+    </FoodProvider>
   )
 }
 

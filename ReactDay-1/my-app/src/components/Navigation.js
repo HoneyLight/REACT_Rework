@@ -1,7 +1,16 @@
 import './Navigation.css';
+import logo from "./images/logo2.png";
 import { Link } from "react-router-dom";
+import { IoCartOutline} from "react-icons/io5";
+import { FoodContext } from '../contexts/FoodContext';
+import { useContext } from 'react';
 
 function Navigation() {
+
+    // this is how to make your component pick the general state variables that you called on the FoodContext page
+    const props = useContext(FoodContext);
+    const cart = props.cart;
+    const num = props.num;
 
     // const lists = {
     //     padding: "10px",
@@ -21,7 +30,7 @@ function Navigation() {
                 <li style={lists}>Services</li>
             </ul> */}
             <h1 className='logo'>
-                <Link to="/" className='nav-link'>Logo</Link>
+                <Link to="/" className='nav-link'><img src={logo} alt="" /></Link>
             </h1>
             <ul>
                 <li className='list'>
@@ -33,9 +42,9 @@ function Navigation() {
                 <li className='list'>
                     <Link to="/menu" className='nav-link'>Menu</Link>
                 </li>
-                <li className='list'>
+                {/* <li className='list'>
                     <Link to="/flowermenu" className='nav-link'>Flower Menu</Link>
-                </li>
+                </li> */}
                 <li className='list'>
                     <Link to="/contact" className='nav-link'>Contact</Link>
                 </li>
@@ -45,16 +54,12 @@ function Navigation() {
                 <li className='list'>
                     <Link to="/classcomp" className='nav-link'>Class Component</Link>
                 </li>
-                <li className='list'>
+                {/* <li className='list'>
                     <Link to="/posts" className='nav-link'>Posts</Link>
-                </li>
+                </li> */}
                 <li className='list'>
-                    <Link to="/fooddetails" className='nav-link'>Food Details</Link>
-                </li>
-                <li className="list">
-                    <Link to="/blog" className="nav-link">
-                    Blog
-                    </Link>
+                    <Link to="/cart" className='nav-link'><IoCartOutline className='cart-icon'/>
+                    <span className='cart_count'>{cart}</span></Link>
                 </li>
             </ul>
         </header>
